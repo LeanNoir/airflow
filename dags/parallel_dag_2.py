@@ -23,7 +23,7 @@ with DAG('parallel_dag_2', start_date=datetime(2022, 1, 1),
  
     load_b = BashOperator(
         task_id='load_b',
-        bash_command='echo "hola desde airflow"'
+        bash_command='echo "hola desde airflow"',
         bash_command='sleep 1'
     )
  
