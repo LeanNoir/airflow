@@ -3,12 +3,12 @@ from airflow.operators.bash import BashOperator
  
 from datetime import datetime
  
-with DAG('parallel_dag_test_delete', start_date=datetime(2022, 1, 1), 
+with DAG('parallel_dag_delete', start_date=datetime(2022, 1, 1), 
     schedule_interval='@daily', catchup=False) as dag:
  
     extract_a = BashOperator(
         task_id='extract_a',
-        bash_command='echo ANDA!!!'
+        bash_command='echo SE BORRO LA OTRA TAREA!!!'
     )
  
     extract_b = BashOperator(
