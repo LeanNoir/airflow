@@ -3,7 +3,7 @@ from airflow import DAG
 from airflow.contrib.hooks.ssh_hook import SSHHook
 from airflow.contrib.operators.sftp_operator import SFTPOperator
 
-
+sftp_conn_id='SFSF_DATA'
 
 default_args = {
     'owner': 'airflow',
